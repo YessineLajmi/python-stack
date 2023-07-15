@@ -22,6 +22,12 @@ const str4 = "  global   information tracker    ";
 const expected4 = "GIT";
 
 function acronymize(str) {
-  const words = str1.split(" ");
-  console.log(words[5]);
+  var result = "";
+  for (let i = 0; i < str.length - 2; i++) {
+    if (str[i] == " " && str[i + 1] != " ") {
+      result += str[i + 1].toUpperCase();
+    }
+  }
+  return result;
 }
+console.log(acronymize(str4));
